@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/icon-complete.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>interactive card details</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="side-section">
+            <div class="front-card">
+                <div class="card-logo">
+                    <img src="images/card-logo.svg" alt="card logo">
+                </div>
+                <div class="card-info">
+                    <div class="card-number">0000 0000 0000 0000</div>
+                    <div class="card-name-and-exp">
+                        <div class="name">ahmed elshahat</div>
+                        <div class="exp-date">
+                            <div class="month">00</div>/<div class="year">00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="back-card">
+                <div class="cvc">000</div>
+            </div>
+        </div>
+        <div class="work-section">
+            <form>
+                <div class="input-div name-input">
+                    <label for="cardName">cardholder name</label>
+                    <input type="text" id="cardName" placeholder="e.g. Ahmed Elshahat">
+                    <span class="error-span name-error-span"></span>
+                </div>
+                <div class="input-div number-input">
+                    <label for="cardNumber">card number</label>
+                    <input type="text" id="cardNumber" minlength="16" maxlength="16" placeholder="e.g. 1234 5678 9100 0000">
+                    <span class="error-span number-error-span"></span>
+                </div>
+                <div class="date-and-cvc">
+                    <div class="card-date">
+                        <label for="cardMonth">exp. date (mm/yy)</label>
+                        <div>
+                            <input type="text" id="cardMonth" maxlength="2" placeholder="MM">
+                            <input type="text" id="cardYear" maxlength="2" placeholder="YY">
+                        </div>
+                        <span class="error-span date-error-span"></span>
+                    </div>
+                    <div class="card-cvc">
+                        <label for="cardCvc">cvc</label>
+                        <input type="text" id="cardCvc" maxlength="3" placeholder="e.g. 123">
+                        <span class="error-span cvc-error-span"></span>
+                    </div>
+                </div>
+                <p id="validationMessage"></p>
+                <button type="submit">confirm</button>
+            </form>
+            <div class="success-message">
+                <img src="images/icon-complete.svg" alt="compeleted icon">
+                <h3>thank you !</h3>
+                <p>we've added your card details</p>
+                <button type="submit" id="successContinueBtn">continue</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
